@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fancy Text Generator — Cool Fonts for Instagram, WhatsApp & TikTok</title>
+<meta name="description" content="Generate fancy text fonts instantly. Copy paste cool fonts for Instagram bio, WhatsApp, TikTok, Twitter and Facebook. Cursive, gothic, bold, bubble text and 20+ styles. Free forever.">
+<meta name="keywords" content="fancy text generator, instagram fonts, cool text generator, cursive text generator, bold text generator, gothic text generator, bubble text, copy paste fonts">
+<meta property="og:title" content="Fancy Text Generator — 20+ Cool Font Styles">
+<meta property="og:description" content="Type anything, get 20+ fancy font styles instantly. Copy with one tap. Works on Instagram, WhatsApp, TikTok, Twitter.">
+<meta property="og:type" content="website">
+<link rel="canonical" href="https://yourdomain.com/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"Fancy Text Generator","description":"Free fancy text generator with 20+ font styles for Instagram, WhatsApp and TikTok","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}
+</script>
+
+<!-- AdSense — replace with your code after approval -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXX" crossorigin="anonymous"></script> -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;700&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --bg: #09090f;
+  --surface: #111118;
+  --surface2: #1a1a24;
+  --border: #ffffff0f;
+  --border2: #ffffff1a;
+  --text: #f0eeff;
+  --muted: #6b6880;
+  --purple: #a78bfa;
+  --pink: #f472b6;
+  --cyan: #22d3ee;
+  --green: #4ade80;
+  --orange: #fb923c;
+  --accent: #a78bfa;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* ── NOISE OVERLAY ── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+/* ── GLOW ORBS ── */
+.orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.15;
+}
+.orb1 { width: 400px; height: 400px; background: var(--purple); top: -100px; right: -100px; }
+.orb2 { width: 300px; height: 300px; background: var(--pink); bottom: 10%; left: -80px; }
+.orb3 { width: 250px; height: 250px; background: var(--cyan); top: 40%; right: 10%; }
+
+/* ── LAYOUT ── */
+.wrap { position: relative; z-index: 1; max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+/* ── HEADER ── */
+header {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 0;
+}
+
+.logo {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--purple), var(--pink));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-decoration: none;
+}
+
+.logo-badge {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 99px;
+}
+
+/* ── HERO ── */
+.hero {
+  padding: 56px 0 40px;
+  text-align: center;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #a78bfa15;
+  border: 1px solid #a78bfa30;
+  color: var(--purple);
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px 14px;
+  border-radius: 99px;
+  margin-bottom: 20px;
+  animation: fadeDown 0.5s ease both;
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+h1 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(32px, 7vw, 64px);
+  font-weight: 800;
+  line-height: 1.05;
+  margin-bottom: 16px;
+  animation: fadeDown 0.5s 0.1s ease both;
+}
+
+h1 .grad {
+  background: linear-gradient(135deg, var(--purple) 0%, var(--pink) 50%, var(--orange) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-sub {
+  color: var(--muted);
+  font-size: 16px;
+  max-width: 480px;
+  margin: 0 auto 32px;
+  animation: fadeDown 0.5s 0.2s ease both;
+}
+
+/* ── INPUT BOX ── */
+.input-wrap {
+  background: var(--surface);
+  border: 1px solid var(--border2);
+  border-radius: 16px;
+  padding: 4px;
+  margin-bottom: 8px;
+  animation: fadeDown 0.5s 0.3s ease both;
+  transition: border-color 0.2s;
+}
+
+.input-wrap:focus-within {
+  border-color: #a78bfa50;
+  box-shadow: 0 0 0 3px #a78bfa10;
+}
+
+#mainInput {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text);
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 16px 20px;
+  resize: none;
+  min-height: 80px;
+}
+
+#mainInput::placeholder { color: var(--muted); }
+
+.input-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 14px 10px;
+  border-top: 1px solid var(--border);
+}
+
+.char-count { font-size: 12px; color: var(--muted); }
+
+.clear-btn {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-size: 12px;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: color 0.15s;
+  padding: 2px 0;
+}
+.clear-btn:hover { color: var(--pink); }
+
+/* ── PLATFORMS HINT ── */
+.platforms {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  animation: fadeDown 0.5s 0.4s ease both;
+}
+
+.plat {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 99px;
+  padding: 4px 12px;
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* ── AD SLOT ── */
+.ad-slot {
+  background: var(--surface);
+  border: 1px dashed var(--border2);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: center;
+  color: var(--muted);
+  font-size: 11px;
+  margin: 0 0 32px;
+}
+
+/* ── SECTION TITLE ── */
+.section-title {
+  font-family: 'Syne', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--muted);
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border);
+}
+
+/* ── FONT GRID ── */
+.font-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 10px;
+  margin-bottom: 40px;
+}
+
+/* ── FONT CARD ── */
+.font-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  transition: all 0.18s;
+  position: relative;
+  overflow: hidden;
+  cursor: default;
+}
+
+.font-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--card-color, #a78bfa) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+.font-card:hover {
+  border-color: var(--card-color, #a78bfa);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+}
+
+.font-card:hover::before { opacity: 0.05; }
+
+.card-top {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.style-name {
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--card-color, var(--purple));
+}
+
+.copy-btn {
+  background: var(--surface2);
+  border: 1px solid var(--border2);
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: 'Space Grotesk', sans-serif;
+  transition: all 0.15s;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.copy-btn:hover {
+  background: var(--card-color, var(--purple));
+  border-color: var(--card-color, var(--purple));
+  color: white;
+}
+
+.copy-btn.copied {
+  background: var(--green);
+  border-color: var(--green);
+  color: #000;
+}
+
+.font-output {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--text);
+  min-height: 28px;
+  word-break: break-all;
+  position: relative;
+}
+
+.font-output.placeholder { color: var(--muted); font-size: 14px; }
+
+/* ── TOAST ── */
+.toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  transform: translateX(-50%) translateY(20px);
+  background: var(--green);
+  color: #000;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 10px 24px;
+  border-radius: 99px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.25s;
+  z-index: 999;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ── SEO CONTENT ── */
+.seo-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 28px;
+  margin-bottom: 32px;
+}
+
+.seo-section h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 12px;
+  color: var(--text);
+}
+
+.seo-section p {
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 10px;
+}
+
+.seo-section p:last-child { margin-bottom: 0; }
+
+/* ── FAQ ── */
+.faq-item {
+  border-bottom: 1px solid var(--border);
+  padding: 16px 0;
+}
+
+.faq-q {
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  color: var(--text);
+}
+
+.faq-icon { color: var(--muted); font-size: 18px; flex-shrink: 0; transition: transform 0.2s; }
+.faq-q.open .faq-icon { transform: rotate(45deg); color: var(--purple); }
+
+.faq-a {
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.75;
+  margin-top: 10px;
+  display: none;
+}
+.faq-a.open { display: block; }
+
+/* ── FOOTER ── */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 32px 0;
+  text-align: center;
+  color: var(--muted);
+  font-size: 12px;
+  margin-top: 20px;
+}
+
+footer a { color: var(--purple); text-decoration: none; }
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+  h1 { font-size: 36px; }
+  .font-grid { grid-template-columns: 1fr; }
+  .hero { padding: 36px 0 28px; }
+}
+
+/* ── ANIMATIONS ── */
+.font-card { animation: cardIn 0.4s ease both; }
+@keyframes cardIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.font-card:nth-child(1)  { animation-delay: 0.02s }
+.font-card:nth-child(2)  { animation-delay: 0.04s }
+.font-card:nth-child(3)  { animation-delay: 0.06s }
+.font-card:nth-child(4)  { animation-delay: 0.08s }
+.font-card:nth-child(5)  { animation-delay: 0.10s }
+.font-card:nth-child(6)  { animation-delay: 0.12s }
+.font-card:nth-child(7)  { animation-delay: 0.14s }
+.font-card:nth-child(8)  { animation-delay: 0.16s }
+.font-card:nth-child(9)  { animation-delay: 0.18s }
+.font-card:nth-child(10) { animation-delay: 0.20s }
+.font-card:nth-child(11) { animation-delay: 0.22s }
+.font-card:nth-child(12) { animation-delay: 0.24s }
+.font-card:nth-child(13) { animation-delay: 0.26s }
+.font-card:nth-child(14) { animation-delay: 0.28s }
+.font-card:nth-child(15) { animation-delay: 0.30s }
+.font-card:nth-child(16) { animation-delay: 0.32s }
+.font-card:nth-child(17) { animation-delay: 0.34s }
+.font-card:nth-child(18) { animation-delay: 0.36s }
+.font-card:nth-child(19) { animation-delay: 0.38s }
+.font-card:nth-child(20) { animation-delay: 0.40s }
+</style>
+</head>
+<body>
+
+<div class="orb orb1"></div>
+<div class="orb orb2"></div>
+<div class="orb orb3"></div>
+<div class="toast" id="toast">✓ Copied!</div>
+
+<div class="wrap">
+
+  <!-- HEADER -->
+  <header>
+    <a href="/" class="logo">✦ FancyText</a>
+    <span class="logo-badge">20+ styles · free forever</span>
+  </header>
+
+  <!-- HERO -->
+  <div class="hero">
+    <div class="hero-tag">✦ Used by 1M+ people worldwide</div>
+    <h1>Make your text<br><span class="grad">impossibly fancy</span></h1>
+    <p class="hero-sub">Type anything below. Get 20+ cool font styles instantly. Copy with one tap and paste anywhere.</p>
+
+    <!-- INPUT -->
+    <div class="input-wrap">
+      <textarea id="mainInput" placeholder="Type anything here... e.g. your name, bio, caption" oninput="updateAll()" maxlength="500"></textarea>
+      <div class="input-footer">
+        <span class="char-count"><span id="charNum">0</span>/500</span>
+        <button class="clear-btn" onclick="clearAll()">✕ Clear</button>
+      </div>
+    </div>
+
+    <!-- PLATFORMS -->
+    <div class="platforms">
+      <span class="plat">📸 Instagram</span>
+      <span class="plat">💬 WhatsApp</span>
+      <span class="plat">🎵 TikTok</span>
+      <span class="plat">🐦 Twitter/X</span>
+      <span class="plat">📘 Facebook</span>
+      <span class="plat">💼 LinkedIn</span>
+    </div>
+  </div>
+
+  <!-- TOP AD -->
+  <div class="ad-slot">
+    📢 Advertisement — Add your Google AdSense code here (728×90)
+  </div>
+
+  <!-- FONT RESULTS -->
+  <div class="section-title">All font styles</div>
+
+  <div class="font-grid" id="fontGrid"></div>
+
+  <!-- MIDDLE AD -->
+  <div class="ad-slot">
+    📢 Advertisement — Responsive display ad (AdSense code here)
+  </div>
+
+  <!-- SEO CONTENT -->
+  <div class="seo-section">
+    <h2>What is a Fancy Text Generator?</h2>
+    <p>A fancy text generator converts your normal text into stylish Unicode fonts that you can copy and paste anywhere — Instagram bios, WhatsApp status, TikTok usernames, Twitter profiles, Facebook posts, and more.</p>
+    <p>Unlike regular fonts that require special software, these fancy fonts are made using Unicode characters that work natively on every device and platform. When you type your name or caption here, it instantly appears in 20+ different styles — bold, italic, cursive, gothic, bubble, glitch, and many more.</p>
+    <p>Simply type your text in the box above, find the style you love, and click "Copy" to copy it to your clipboard. Then paste it anywhere you like. It works on iPhone, Android, Windows, Mac — every device, no app download required.</p>
+  </div>
+
+  <!-- FAQ -->
+  <div class="seo-section" style="margin-bottom:32px">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Does fancy text work on Instagram bio?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Yes! All font styles on this page work perfectly in Instagram bios, captions, comments, and stories. Instagram supports Unicode characters which is how these fancy fonts are made. Simply copy the style you like and paste it directly into your Instagram bio editor.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Why does fancy text work everywhere?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">These are not actually "fonts" — they are Unicode characters that look like styled letters. Unicode is a universal text standard supported by every device, operating system, and social media platform in the world. That's why you can paste them anywhere without installing any font.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Is this tool free to use?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">100% free, forever. No signup, no account, no daily limits. Use it as many times as you want for personal or commercial purposes.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Does it work on WhatsApp?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Yes. Copy any fancy text style and paste it directly into WhatsApp messages, status, or your display name. All styles are compatible with WhatsApp on both iPhone and Android.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Can I use fancy text in my TikTok username?
+        <span class="faq-icon">+</span>
+      </div>
+      <div class="faq-a">Yes! Many TikTok creators use fancy text in their display names and bios to stand out. Copy any style from above and paste it in your TikTok profile editor. Note: TikTok usernames (the @handle) only allow standard characters, but your display name supports Unicode fonts.</div>
+    </div>
+  </div>
+
+  <!-- BOTTOM AD -->
+  <div class="ad-slot">
+    📢 Advertisement — Footer banner (AdSense code here)
+  </div>
+
+</div><!-- /wrap -->
+
+<footer>
+  <div class="wrap">
+    <p>© 2026 FancyText Generator — Free cool fonts for Instagram, WhatsApp & TikTok</p>
+    <p style="margin-top:8px"><a href="/privacy.html">Privacy Policy</a> · <a href="/about.html">About</a> · All text processing happens in your browser. We never store your text.</p>
+  </div>
+</footer>
+
+<script>
+// ═══════════════════════════════════════════════════
+// UNICODE FONT MAPS — 20 Styles
+// ═══════════════════════════════════════════════════
+const normal = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+const FONTS = [
+  {
+    name: 'Bold',
+    color: '#a78bfa',
+    placeholder: '𝗕𝗼𝗹𝗱 𝗧𝗲𝘅𝘁',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝗔𝗕𝗖𝗗𝗘𝗙𝗚𝗛𝗜𝗝𝗞𝗟𝗠𝗡𝗢𝗣𝗤𝗥𝗦𝗧𝗨𝗩𝗪𝗫𝗬𝗭𝗮𝗯𝗰𝗱𝗲𝗳𝗴𝗵𝗶𝗷𝗸𝗹𝗺𝗻𝗼𝗽𝗾𝗿𝘀𝘁𝘂𝘃𝘄𝘅𝘆𝘇𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Italic',
+    color: '#f472b6',
+    placeholder: '𝘐𝘵𝘢𝘭𝘪𝘤 𝘛𝘦𝘹𝘵',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝘈𝘉𝘊𝘋𝘌𝘍𝘎𝘏𝘐𝘑𝘒𝘓𝘔𝘕𝘖𝘗𝘘𝘙𝘚𝘛𝘜𝘝𝘞𝘟𝘠𝘡𝘢𝘣𝘤𝘥𝘦𝘧𝘨𝘩𝘪𝘫𝘬𝘭𝘮𝘯𝘰𝘱𝘲𝘳𝘴𝘵𝘶𝘷𝘸𝘹𝘺𝘻';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Bold Italic',
+    color: '#fb923c',
+    placeholder: '𝙱𝚘𝚕𝚍 𝙸𝚝𝚊𝚕𝚒𝚌',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝑨𝑩𝑪𝑫𝑬𝑭𝑮𝑯𝑰𝑱𝑲𝑳𝑴𝑵𝑶𝑷𝑸𝑹𝑺𝑻𝑼𝑽𝑾𝑿𝒀𝒁𝒂𝒃𝒄𝒅𝒆𝒇𝒈𝒉𝒊𝒋𝒌𝒍𝒎𝒏𝒐𝒑𝒒𝒓𝒔𝒕𝒖𝒗𝒘𝒙𝒚𝒛';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Cursive',
+    color: '#34d399',
+    placeholder: '𝓒𝓾𝓻𝓼𝓲𝓿𝓮',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝓐𝓑𝓒𝓓𝓔𝓕𝓖𝓗𝓘𝓙𝓚𝓛𝓜𝓝𝓞𝓟𝓠𝓡𝓢𝓣𝓤𝓥𝓦𝓧𝓨𝓩𝓪𝓫𝓬𝓭𝓮𝓯𝓰𝓱𝓲𝓳𝓴𝓵𝓶𝓷𝓸𝓹𝓺𝓻𝓼𝓽𝓾𝓿𝔀𝔁𝔂𝔃';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Gothic / Blackletter',
+    color: '#60a5fa',
+    placeholder: '𝔊𝔬𝔱𝔥𝔦𝔠',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝔄𝔅ℭ𝔇𝔈𝔉𝔊ℌℑ𝔍𝔎𝔏𝔐𝔑𝔒𝔓𝔔ℜ𝔖𝔗𝔘𝔙𝔚𝔛𝔜ℨ𝔞𝔟𝔠𝔡𝔢𝔣𝔤𝔥𝔦𝔧𝔨𝔩𝔪𝔫𝔬𝔭𝔮𝔯𝔰𝔱𝔲𝔳𝔴𝔵𝔶𝔷';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Double Struck',
+    color: '#a78bfa',
+    placeholder: '𝔻𝕠𝕦𝕓𝕝𝕖',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝔸𝔹ℂ𝔻𝔼𝔽𝔾ℍ𝕀𝕁𝕂𝕃𝕄ℕ𝕆ℙℚℝ𝕊𝕋𝕌𝕍𝕎𝕏𝕐ℤ𝕒𝕓𝕔𝕕𝕖𝕗𝕘𝕙𝕚𝕛𝕜𝕝𝕞𝕟𝕠𝕡𝕢𝕣𝕤𝕥𝕦𝕧𝕨𝕩𝕪𝕫𝟘𝟙𝟚𝟛𝟜𝟝𝟞𝟟𝟠𝟡';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Monospace',
+    color: '#22d3ee',
+    placeholder: '𝙼𝚘𝚗𝚘𝚜𝚙𝚊𝚌𝚎',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      .split('').reduce((a,c,i) => {
+        const chars = '𝙰𝙱𝙲𝙳𝙴𝙵𝙶𝙷𝙸𝙹𝙺𝙻𝙼𝙽𝙾𝙿𝚀𝚁𝚂𝚃𝚄𝚅𝚆𝚇𝚈𝚉𝚊𝚋𝚌𝚍𝚎𝚏𝚐𝚑𝚒𝚓𝚔𝚕𝚖𝚗𝚘𝚙𝚚𝚛𝚜𝚝𝚞𝚟𝚠𝚡𝚢𝚣𝟶𝟷𝟸𝟹𝟺𝟻𝟼𝟽𝟾𝟿';
+        a[c] = [...chars][i]; return a;
+      }, {})
+  },
+  {
+    name: 'Tiny Caps',
+    color: '#f472b6',
+    placeholder: 'ᴛɪɴʏ ᴄᴀᴘꜱ',
+    map: {
+      'a':'ᴀ','b':'ʙ','c':'ᴄ','d':'ᴅ','e':'ᴇ','f':'ꜰ','g':'ɢ','h':'ʜ','i':'ɪ','j':'ᴊ',
+      'k':'ᴋ','l':'ʟ','m':'ᴍ','n':'ɴ','o':'ᴏ','p':'ᴘ','q':'Q','r':'ʀ','s':'ꜱ','t':'ᴛ',
+      'u':'ᴜ','v':'ᴠ','w':'ᴡ','x':'x','y':'ʏ','z':'ᴢ',
+      'A':'ᴀ','B':'ʙ','C':'ᴄ','D':'ᴅ','E':'ᴇ','F':'ꜰ','G':'ɢ','H':'ʜ','I':'ɪ','J':'ᴊ',
+      'K':'ᴋ','L':'ʟ','M':'ᴍ','N':'ɴ','O':'ᴏ','P':'ᴘ','Q':'Q','R':'ʀ','S':'ꜱ','T':'ᴛ',
+      'U':'ᴜ','V':'ᴠ','W':'ᴡ','X':'x','Y':'ʏ','Z':'ᴢ'
+    }
+  },
+  {
+    name: 'Upside Down',
+    color: '#fb923c',
+    placeholder: 'uʍop ǝpᴉsd∩',
+    map: {
+      'a':'ɐ','b':'q','c':'ɔ','d':'p','e':'ǝ','f':'ɟ','g':'ƃ','h':'ɥ','i':'ᴉ','j':'ɾ',
+      'k':'ʞ','l':'l','m':'ɯ','n':'u','o':'o','p':'d','q':'b','r':'ɹ','s':'s','t':'ʇ',
+      'u':'n','v':'ʌ','w':'ʍ','x':'x','y':'ʎ','z':'z',
+      'A':'∀','B':'q','C':'Ɔ','D':'p','E':'Ǝ','F':'Ⅎ','G':'פ','H':'H','I':'I','J':'ɾ',
+      'K':'ʞ','L':'˥','M':'W','N':'N','O':'O','P':'Ԁ','Q':'Q','R':'ɹ','S':'S','T':'┴',
+      'U':'∩','V':'Λ','W':'M','X':'X','Y':'⅄','Z':'Z',
+      '0':'0','1':'Ɩ','2':'ᄅ','3':'Ɛ','4':'ㄣ','5':'ϛ','6':'9','7':'ㄥ','8':'8','9':'6',
+      '!':'¡','?':'¿',',':'\'','\'':',',' ':' '
+    },
+    reverse: true
+  },
+  {
+    name: 'Strikethrough',
+    color: '#6b6880',
+    placeholder: 'S̶t̶r̶i̶k̶e̶t̶h̶r̶o̶u̶g̶h̶',
+    combining: '\u0336'
+  },
+  {
+    name: 'Underline',
+    color: '#34d399',
+    placeholder: 'U͟n͟d͟e͟r͟l͟i͟n͟e͟d͟',
+    combining: '\u035F'
+  },
+  {
+    name: 'Overline',
+    color: '#60a5fa',
+    placeholder: 'O̅v̅e̅r̅l̅i̅n̅e̅',
+    combining: '\u0305'
+  },
+  {
+    name: 'Wide / Fullwidth',
+    color: '#a78bfa',
+    placeholder: 'Ｗｉｄｅ　Ｔｅｘｔ',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 '
+      .split('').reduce((a,c,i) => {
+        const chars = [...'ＡＢＣＤＥＦＧＨＩＪＫＬＭＮＯＰＱＲＳＴＵＶＷＸＹＺａｂｃｄｅｆｇｈｉｊｋｌｍｎｏｐｑｒｓｔｕｖｗｘｙｚ０１２３４５６７８９　'];
+        a[c] = chars[i]; return a;
+      }, {})
+  },
+  {
+    name: 'Bubble Text',
+    color: '#22d3ee',
+    placeholder: '🅑🅤🅑🅑🅛🅔',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789'
+      .split('').reduce((a,c,i) => {
+        const chars = [...'ⒶⒷⒸⒹⒺⒻⒼⒽⒾⒿⓀⓁⓂⓃⓄⓅⓆⓇⓈⓉⓊⓋⓌⓍⓎⓏⓐⓑⓒⓓⓔⓕⓖⓗⓘⓙⓚⓛⓜⓝⓞⓟⓠⓡⓢⓣⓤⓥⓦⓧⓨⓩ⓪①②③④⑤⑥⑦⑧⑨'];
+        a[c] = chars[i]; return a;
+      }, {})
+  },
+  {
+    name: 'Filled Bubble',
+    color: '#f472b6',
+    placeholder: '🅕🅘🅛🅛🅔🅓',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = [...'🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩🅐🅑🅒🅓🅔🅕🅖🅗🅘🅙🅚🅛🅜🅝🅞🅟🅠🅡🅢🅣🅤🅥🅦🅧🅨🅩'];
+        a[c] = chars[i]; return a;
+      }, {})
+  },
+  {
+    name: 'Square',
+    color: '#fb923c',
+    placeholder: '🆂🆀🆄🅰🆁🅴',
+    map: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'
+      .split('').reduce((a,c,i) => {
+        const chars = [...'🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉🄰🄱🄲🄳🄴🄵🄶🄷🄸🄹🄺🄻🄼🄽🄾🄿🅀🅁🅂🅃🅄🅅🅆🅇🅈🅉'];
+        a[c] = chars[i]; return a;
+      }, {})
+  },
+  {
+    name: 'Glitch / Zalgo',
+    color: '#e11d48',
+    placeholder: 'G̷l̷i̷t̷c̷h̷',
+    glitch: true
+  },
+  {
+    name: 'Stars Decorated',
+    color: '#fbbf24',
+    placeholder: '★ Fancy ★',
+    decorate: { prefix: '✦ ', suffix: ' ✦' }
+  },
+  {
+    name: 'Arrow Decorated',
+    color: '#34d399',
+    placeholder: '➤ Text ➤',
+    decorate: { prefix: '➤ ', suffix: ' ➤' }
+  },
+  {
+    name: 'Heart Decorated',
+    color: '#f472b6',
+    placeholder: '❤ Love ❤',
+    decorate: { prefix: '❤ ', suffix: ' ❤' }
+  }
+];
+
+// ═══════════════════════════════════════════════════
+// CONVERT FUNCTIONS
+// ═══════════════════════════════════════════════════
+
+function convertText(text, font) {
+  if (!text) return '';
+
+  // Combining diacritics (strikethrough, underline, overline)
+  if (font.combining) {
+    return [...text].map(c => c + font.combining).join('');
+  }
+
+  // Glitch effect
+  if (font.glitch) {
+    const above = ['̍','̎','̄','̅','̿','̑','̆','̐','͒','͗','͑','̇','̈','̊','͂','̓','̈'];
+    const mid   = ['̕','̛','̀','́','͘','̡','̢','̧','̨','̴','̵','̶','͜','͝','͞','͟','͠','͢','̸','̷','͡'];
+    return [...text].map(c => {
+      let r = c;
+      if (c.trim()) {
+        const n = Math.floor(Math.random() * 3) + 1;
+        for (let i = 0; i < n; i++) r += above[Math.floor(Math.random()*above.length)];
+        const m = Math.floor(Math.random() * 2);
+        for (let i = 0; i < m; i++) r += mid[Math.floor(Math.random()*mid.length)];
+      }
+      return r;
+    }).join('');
+  }
+
+  // Decoration
+  if (font.decorate) {
+    return font.decorate.prefix + text + font.decorate.suffix;
+  }
+
+  // Map-based conversion
+  if (font.map) {
+    let result = [...text].map(c => font.map[c] || c).join('');
+    if (font.reverse) result = [...result].reverse().join('');
+    return result;
+  }
+
+  return text;
+}
+
+// ═══════════════════════════════════════════════════
+// RENDER CARDS
+// ═══════════════════════════════════════════════════
+
+function buildGrid() {
+  const grid = document.getElementById('fontGrid');
+  grid.innerHTML = FONTS.map((font, idx) => `
+    <div class="font-card" style="--card-color:${font.color}">
+      <div class="card-top">
+        <span class="style-name">${font.name}</span>
+        <button class="copy-btn" id="copybtn-${idx}" onclick="copyFont(${idx})">Copy</button>
+      </div>
+      <div class="font-output placeholder" id="output-${idx}">${font.placeholder}</div>
+    </div>
+  `).join('');
+}
+
+function updateAll() {
+  const text = document.getElementById('mainInput').value;
+  document.getElementById('charNum').textContent = text.length;
+
+  FONTS.forEach((font, idx) => {
+    const el = document.getElementById('output-' + idx);
+    if (!text.trim()) {
+      el.textContent = font.placeholder;
+      el.classList.add('placeholder');
+    } else {
+      el.textContent = convertText(text, font);
+      el.classList.remove('placeholder');
+    }
+  });
+}
+
+function clearAll() {
+  document.getElementById('mainInput').value = '';
+  document.getElementById('charNum').textContent = '0';
+  FONTS.forEach((font, idx) => {
+    const el = document.getElementById('output-' + idx);
+    el.textContent = font.placeholder;
+    el.classList.add('placeholder');
+  });
+}
+
+function copyFont(idx) {
+  const text = document.getElementById('mainInput').value;
+  if (!text.trim()) {
+    document.getElementById('mainInput').focus();
+    return;
+  }
+  const converted = convertText(text, FONTS[idx]);
+  navigator.clipboard.writeText(converted).then(() => {
+    const btn = document.getElementById('copybtn-' + idx);
+    btn.textContent = '✓ Copied!';
+    btn.classList.add('copied');
+    setTimeout(() => {
+      btn.textContent = 'Copy';
+      btn.classList.remove('copied');
+    }, 2000);
+    showToast();
+  });
+}
+
+function showToast() {
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+function toggleFaq(el) {
+  const a = el.nextElementSibling;
+  const isOpen = a.classList.contains('open');
+  document.querySelectorAll('.faq-a').forEach(x => x.classList.remove('open'));
+  document.querySelectorAll('.faq-q').forEach(x => x.classList.remove('open'));
+  if (!isOpen) { a.classList.add('open'); el.classList.add('open'); }
+}
+
+// ═══════════════════════════════════════════════════
+// INIT
+// ═══════════════════════════════════════════════════
+buildGrid();
+
+// Auto-focus input on desktop
+if (window.innerWidth > 768) {
+  document.getElementById('mainInput').focus();
+}
+</script>
+</body>
+</html>
